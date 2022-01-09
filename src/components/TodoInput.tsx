@@ -32,7 +32,11 @@ const TodoInput = ({refresh}: IProps) => {
                     alert("service error")
                     return;
                 }
-                refresh()
+                response.text().then(function (data) {
+                    alert(data)
+                    refresh()
+                });
+
             }
         ).catch(function (err) {
             console.log("addTodo error:" + err)

@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {Todo} from '../common/common';
-import {deleteStyle, ordinaryStyle, TodoAdd, WholeDiv, inputTextStyle} from "../css/css";
+import {deleteStyle, ordinaryStyle, TodoAdd, WholeDiv, inputTextStyle} from '../css/css';
+import {fetchGet, fetchPostAndPut} from "../util/fetchUtil";
+import {TODOS_URL} from "../common/constant";
 import qs from "querystring";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -11,9 +13,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 
-
-
-
 const TodoList = () => {
 
     const [toDoList, setToDoList] = useState<Todo[]>([]);
@@ -21,8 +20,7 @@ const TodoList = () => {
 
     React.useEffect(() => {
         console.log('fetch todoList');
-        fetch("http://127.0.0.1:8080/todo")
-            .then(
+        fetchGet(TODOS_URL).then(
                 function (response) {
                     response.json().then(function (data) {
                         setToDoList(data)
@@ -32,17 +30,11 @@ const TodoList = () => {
     }, []);
 
     const changHandler = (item: Todo) => {
-        fetch('http://127.0.0.1:8080/todo/'+item.id, {
-            method: 'put',
-            headers: {
-                'Accept': 'application/json,text/plain,*/*',
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: qs.stringify({
-                finished: item.finished == 0 ? 1:0
-            })
-        }).then(
-            function (response) {
+        let body: string = qs.stringify({
+                     finished: item.finished == 0 ? 1:0
+                 });
+        fetchPostAndPut(TODOS_URL + "/" +item.id,"put", body).then(
+            function () {
                 const updatedTodo = {
                     id: item.id,
                     text: item.text,
@@ -51,25 +43,18 @@ const TodoList = () => {
                 const updatedToDoList = toDoList.map((todo) => (todo.id === item.id ? updatedTodo : todo ));
                 setToDoList(updatedToDoList);
             }
-        ).catch(function (err) {
-            console.log("changeTodo error:" + err)
-        })
+        ).catch(console.error)
     };
+
     const changeTextHandler = (e:React.ChangeEvent) => {
         setText((e.target as HTMLInputElement).value)
     };
 
     const addTodoHandler = () => {
-        fetch('http://127.0.0.1:8080/todo',{
-            method:'post',
-            headers:{
-                'Accept':'application/json,text/plain,*/*',
-                'Content-Type':'application/x-www-form-urlencoded'
-            },
-            body:qs.stringify({
-                text:text
-            })
-        }).then(
+        let body:string = qs.stringify({
+            text:text
+        });
+        fetchPostAndPut(TODOS_URL,"post", body).then(
             function (response) {
                 response.text().then(function (data) {
                     const newTodo = {
@@ -80,10 +65,9 @@ const TodoList = () => {
                     setToDoList([...toDoList, newTodo]);
                 });
             }
-        ).catch(console.error)
-        setText('')
-
-    }
+        ).catch(console.error);
+        setText('');
+    };
 
     return (
         <WholeDiv>
@@ -106,7 +90,6 @@ const TodoList = () => {
                 </Table>
             </TableContainer>
         </WholeDiv>
-
     );
-}
+};
 export default TodoList;

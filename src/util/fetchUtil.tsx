@@ -1,9 +1,16 @@
-import {TODOS_URL} from '../common/constant'
-
-
-
-export const fetchUtil = (url: string):Promise<Response>   =>{
-    let promise: Promise<Response> = fetch(TODOS_URL)
+export const fetchGet = (url: string):Promise<Response> =>{
+    let promise: Promise<Response> = fetch(url)
     return promise
+};
 
-}
+export const fetchPostAndPut = (url: string, type: string, body: string):Promise<Response> =>{
+    let promise: Promise<Response> = fetch(url,{
+        method:type,
+        headers:{
+            'Accept':'application/json,text/plain,*/*',
+            'Content-Type':'application/x-www-form-urlencoded'
+        },
+        body:body
+    })
+    return promise
+};

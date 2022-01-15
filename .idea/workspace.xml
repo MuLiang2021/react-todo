@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f2c02e-02c4-4ab1-9b80-a030cac6cfb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/common.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/constant.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/css.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/TodoList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/fetchUtil.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoInput.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/common.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/common.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/constant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/constant.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/css.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/css.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TodoList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TodoList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/fetchUtil.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/fetchUtil.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,14 +33,18 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/common.tsx">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/constant.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" selection-start-column="13" selection-end-column="22" />
+            <state relative-caret-position="44">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -67,45 +64,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/fetchUtil.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="264">
+              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/TodoList.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/@mui/material/Button/Button.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/css.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="572">
+              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -113,6 +84,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/TodoList.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1166">
+              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,12 +153,12 @@
         <option value="$PROJECT_DIR$/src/pages/TodoInput.tsx" />
         <option value="$PROJECT_DIR$/src/pages/Todo.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
-        <option value="$PROJECT_DIR$/src/css/css.tsx" />
         <option value="$PROJECT_DIR$/src/pages/TodoItem.tsx" />
-        <option value="$PROJECT_DIR$/src/common/constant.tsx" />
         <option value="$PROJECT_DIR$/src/common/common.tsx" />
+        <option value="$PROJECT_DIR$/src/css/css.tsx" />
         <option value="$PROJECT_DIR$/src/util/fetchUtil.tsx" />
         <option value="$PROJECT_DIR$/src/pages/TodoList.tsx" />
+        <option value="$PROJECT_DIR$/src/common/constant.tsx" />
       </list>
     </option>
   </component>
@@ -206,32 +189,6 @@
             <path>
               <item name="react-todo" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-todo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-todo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-todo" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-todo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-todo" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="@mui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-todo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-todo" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="@mui" type="462c0819:PsiDirectoryNode" />
-              <item name="material" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-todo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-todo" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="@mui" type="462c0819:PsiDirectoryNode" />
-              <item name="material" type="462c0819:PsiDirectoryNode" />
-              <item name="Button" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-todo" type="b2602c69:ProjectViewProjectNode" />
@@ -272,7 +229,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1642213329224" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1642216478600" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../temp/react-hooks-ts-project-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -420,7 +377,7 @@
       <workItem from="1642119370228" duration="17655000" />
       <workItem from="1642170760477" duration="2776000" />
       <workItem from="1642173756456" duration="621000" />
-      <workItem from="1642199590928" duration="7478000" />
+      <workItem from="1642199590928" duration="10717000" />
     </task>
     <servers />
   </component>
@@ -457,7 +414,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131074000" />
+    <option name="totallyTimeSpent" value="134313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -598,13 +555,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/TodoList.test.tsx" />
     <entry file="file://$PROJECT_DIR$/src/test/TodoItem.test.tsx" />
     <entry file="file://$PROJECT_DIR$/src/typings/commons.tsx" />
-    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="17576" column="68" selection-start-line="17576" selection-start-column="68" selection-end-line="17576" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -633,30 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@mui/material/Button/Button.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/css.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/TodoInput.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -677,30 +603,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/fetchUtil.tsx">
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/querystring.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="290">
+          <caret line="59" column="111" selection-start-line="59" selection-start-column="111" selection-end-line="59" selection-end-column="111" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/common.tsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/constant.tsx">
+    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="13" selection-end-column="22" />
+        <state relative-caret-position="298">
+          <caret line="1467" column="4" selection-start-line="1467" selection-start-column="4" selection-end-line="1467" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@mui/material/Button/Button.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/TodoList.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="1166">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/fetchUtil.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/constant.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/common.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/css.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
         </state>
       </provider>
     </entry>

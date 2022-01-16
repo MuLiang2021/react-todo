@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Todo} from '../common/common';
+import {Todo, Warning} from '../common/common';
 import {deleteStyle, ordinaryStyle, TodoAdd, WholeDiv, inputTextStyle} from '../css/css';
 import {fetchGet, fetchPostAndPut} from "../util/fetchUtil";
 import {TODOS_URL} from "../common/constant";
@@ -50,7 +50,26 @@ const TodoList = () => {
         setText((e.target as HTMLInputElement).value)
     };
 
+    const validateGroup = (text: string): Warning => {
+        if(text.trim() === ''){
+            return {warning: true, warningText: 'can not be empty'};
+        }
+        const existText = toDoList.filter((item: Todo) =>{
+            return item.text === text;
+        })
+        if(existText.length){
+            return {warning: true, warningText: 'duplicate text'};
+        }
+        return  {warning: false, warningText: ''};
+    }
+
+
     const addTodoHandler = () => {
+        const validateResult = validateGroup(text);
+        if(validateResult.warning){
+            alert(validateResult.warningText);
+            return;
+        }
         let body:string = qs.stringify({
             text:text
         });
@@ -73,7 +92,7 @@ const TodoList = () => {
         <WholeDiv>
             <TodoAdd>
                 <TextField placeholder="What needs to be done" size="small" style={inputTextStyle} onChange={changeTextHandler} value={text} />
-                <Button onClick={addTodoHandler} variant="outlined">add</Button>
+                <Button onClick={addTodoHandler} variant="outlined">ADD</Button>
             </TodoAdd>
             <TableContainer sx={{ width: 500, margin: "0 auto" }}>
                 <Table  aria-label="simple table">
@@ -81,7 +100,7 @@ const TodoList = () => {
                     {toDoList.map((item, index) =>
                         <TableRow key = {index}>
                             <TableCell  sx={{ padding: "10px" }}>
-                                <Checkbox size="small"  checked = {item.finished == 1} onChange={ () => changHandler(item)} />
+                                <Checkbox size="small" data-testid="checkboxItem"  checked = {item.finished == 1} onChange={ () => changHandler(item)} />
                                 <span style={item.finished == 1? deleteStyle : ordinaryStyle} >{item.text}</span>
                             </TableCell>
                         </TableRow>

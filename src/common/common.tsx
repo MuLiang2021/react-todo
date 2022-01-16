@@ -4,3 +4,10 @@ export interface Todo {
     finished: number;
 };
 
+export interface Warning {
+    warning: boolean;
+    warningText: string;
+}
+
+
+

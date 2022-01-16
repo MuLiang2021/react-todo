@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Todo, Warning} from '../common/common';
 import {deleteStyle, ordinaryStyle, TodoAdd, WholeDiv, inputTextStyle} from '../css/css';
-import {fetchGet, fetchPostAndPut} from "../util/fetchUtil";
+import {fetchGet, fetchDel, fetchPostAndPut} from "../util/fetchUtil";
 import {TODOS_URL} from "../common/constant";
 import qs from "querystring";
 import Table from '@mui/material/Table';
@@ -31,8 +31,8 @@ const TodoList = () => {
 
     const changHandler = (item: Todo) => {
         let body: string = qs.stringify({
-                     finished: item.finished == 0 ? 1:0
-                 });
+            finished: item.finished == 0 ? 1:0
+        });
         fetchPostAndPut(TODOS_URL + "/" +item.id,"put", body).then(
             function () {
                 const updatedTodo = {
@@ -46,6 +46,21 @@ const TodoList = () => {
         ).catch(console.error)
     };
 
+
+
+    const deleteHandler = (item: Todo) => {
+        if (window.confirm('Do you want to delete this text?')) {
+            fetchDel(TODOS_URL + "/" + item.id).then(
+                function (response) {
+                    response.text().then(function (data) {
+                        const updatedToDoList = toDoList.filter((i) => i.id != item.id)
+                        setToDoList(updatedToDoList);
+                    });
+                }
+            ).catch(console.error)
+        }
+    };
+
     const changeTextHandler = (e:React.ChangeEvent) => {
         setText((e.target as HTMLInputElement).value)
     };
@@ -55,7 +70,7 @@ const TodoList = () => {
             return {warning: true, warningText: 'can not be empty'};
         }
         const existText = toDoList.filter((item: Todo) =>{
-            return item.text === text;
+            return item.text.trim() === text.trim();
         })
         if(existText.length){
             return {warning: true, warningText: 'duplicate text'};
@@ -91,17 +106,18 @@ const TodoList = () => {
     return (
         <WholeDiv>
             <TodoAdd>
-                <TextField placeholder="What needs to be done" size="small" style={inputTextStyle} onChange={changeTextHandler} value={text} />
-                <Button onClick={addTodoHandler} variant="outlined">ADD</Button>
+                <TextField placeholder="What needs to be done" size="small"  style={inputTextStyle} onChange={changeTextHandler} value={text} />
+                <Button onClick={addTodoHandler} color = 'inherit' variant="outlined">ADD</Button>
             </TodoAdd>
-            <TableContainer sx={{ width: 500, margin: "0 auto" }}>
+            <TableContainer sx={{ width: 700, margin: "0 auto" }}>
                 <Table  aria-label="simple table">
                     <TableBody>
                     {toDoList.map((item, index) =>
                         <TableRow key = {index}>
                             <TableCell  sx={{ padding: "10px" }}>
-                                <Checkbox size="small" data-testid="checkboxItem"  checked = {item.finished == 1} onChange={ () => changHandler(item)} />
+                                <Checkbox size="small" data-testid="checkboxItem" color="default" checked = {item.finished == 1} onChange={ () => changHandler(item)} />
                                 <span style={item.finished == 1? deleteStyle : ordinaryStyle} >{item.text}</span>
+                                <Button  color = 'inherit' sx={{minWidth: 30,float: 'right'}} variant="outlined" onClick={ () => deleteHandler(item)}>DELETE</Button>
                             </TableCell>
                         </TableRow>
                     )}

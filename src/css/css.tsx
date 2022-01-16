@@ -12,12 +12,12 @@ export const ordinaryStyle = {
 
 export const inputTextStyle = {
     paddingRight: '10px',
-    width: '400px'
+    width: '600px'
 };
 
 
 export const TodoAdd = styled('div')({
-    width : '500px',
+    width : '700px',
     margin : '0 auto',
     textAlign: 'center',
 });
@@ -25,6 +25,9 @@ export const TodoAdd = styled('div')({
 export const WholeDiv = styled('div')({
     margin : '100px'
 });
+
+
+
 
 
 
